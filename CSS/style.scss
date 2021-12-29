@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+$p1 : #000019;
+$p2 : #001249;
+$p3 : #FB0073;
+
+body{
+    background-color: $p1;
+    color: white;
+}
+
+.nav{
+    width: 100%;
+    height: 12vh;
+    background: $p1;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3em;
+    a{
+        text-decoration: none;
+        color: white;
+        font-family: 'Anton', sans-serif;
+    }
+}
+.homeImg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../Images/bg/home.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gamepanelTitle{
+    width: 100%;
+    padding: 2em 0;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    .gamepanelCaption{
+        font-size: 0.5em;
+        font-weight: normal;
+        position: relative;
+    }
+    .gamepanelCaption::before{
+        content: "";
+        height: 100%;
+        width: 30%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: $p3;
+        transform: translate(117%, 170%);
+    }
+}
+
+.gamespanel{
+    width: 90%;
+    margin-left: 5%;
+    height: 50vh;
+    margin-top: 7vh;
+    display: flex;
+    justify-content: space-around;
+    .game{
+        height: 100%;
+        width: 29%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.2s linear;
+        }
+        .gameName{
+            position: absolute;
+            bottom: 10vh;
+            left: 3vh;
+            padding: 0;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: white;
+        }
+        .creater{
+            position: absolute;
+            bottom: 5vh;
+            left: 3vh;
+            padding: 0;
+            color: white;
+        }
+    }
+    .game:hover{
+        background: $p3;
+        img{
+            opacity: 0.3;
+            height: 110%;
+        }
+        .gameName, .creater{
+            width: 100%;
+            left: 0;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .gameName{
+            bottom: 15vh;
+        }
+        .creater{
+            bottom: 10vh;
+        }
+    }
+}
+
+.footer{
+    height: 80vh;
+    margin-top: 10vh;
+    width: 100%;
+    background: $p1;
+    h2{
+        text-align: center;
+        margin-top: 2vh;
+        font-size: 1.3em;
+    }
+    .photodiv, .textdiv{
+        width: 42%;
+        background: $p2;
+        height: 65%;
+        margin-top: 5%;
+        margin-left: 5%;
+        float: left;
+    }
+    .photodiv{
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .photo{
+            height: 80%;
+            width: 60%;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .textdiv{
+        width: 49%;
+        padding: 1em;
+        table{
+            height: 100%;
+            td{
+                height: 25%;
+                width: 50%;
+            }
+        }
+    }
+}
